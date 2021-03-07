@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lowe-Ganesh</string>
+    <string name="str_info_clear">Clear</string>
+    <string name="str_info_cloudy">Cloudy</string>
+    <string name="str_info_rain">Rain</string>
+    <string name="str_info_temp">Temp: %1$s</string>
+    <string name="str_detail_feels_like">Feels Like %1$s</string>
+    <string name="str_details_clouds">Clouds</string>
+</resources>

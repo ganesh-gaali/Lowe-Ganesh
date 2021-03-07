@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/CityFragment">
+    <fragment
+        android:id="@+id/CityFragment"
+        android:name="com.example.lowe.ganesh.ui.FragmentEnterCity"
+        tools:layout="@layout/fragment_enter_city">
+        <action
+            android:id="@+id/action_to_weather_info"
+            app:destination="@id/WeatherInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/WeatherInfo"
+        android:name="com.example.lowe.ganesh.ui.FragmentWeatherInfo"
+        tools:layout="@layout/fragment_weather_info">
+        <action
+            android:id="@+id/action_to_weather_details"
+            app:destination="@id/WeatherDetails" />
+
+        <argument
+            android:name="cityName"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WeatherDetails"
+        android:name="com.example.lowe.ganesh.ui.FragmentWeatherDetails"
+        tools:layout="@layout/fragment_weather_details">
+        <argument
+            android:name="weatherItem"
+            app:argType="com.example.lowe.ganesh.ui.WeatherItem"
+            app:nullable="false" />
+
+    </fragment>
+</navigation>
